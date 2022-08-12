@@ -1,0 +1,51 @@
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #11350f;
+  height: 120px;
+  /* width: 100%; */
+  /* position: fixed; */
+  /* top: 0; */
+  overflow: hidden;
+
+}
+
+.navbar-logo {
+  max-width: 400px;
+}
+
+.navbar-logo img {
+  width: 100%;
+
+}
+
+.navbar-brand {
+  font-size: 40px;
+  margin-left: 1.5em;
+  color: #fff;
+}
+
+.navbar-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-family: "DynaPuff";
+
+}
+
+.navbar-menu a:hover {
+  color: #687d66;
+  text-decoration: underline;
+}
+
+.navbar-menu a {
+  color: #fff;
+  margin-top: -20px;
+  text-decoration: none;
+  padding: 1em;
+}
