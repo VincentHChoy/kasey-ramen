@@ -4,7 +4,7 @@
   align-items: center;
   background-color: #11350f;
   height: 120px;
-  /* width: 100%; */
+  width: 100%;
   /* position: fixed; */
   /* top: 0; */
   overflow: hidden;
@@ -45,7 +45,35 @@
 
 .navbar-menu a {
   color: #fff;
-  margin-top: -20px;
   text-decoration: none;
   padding: 1em;
+}
+
+.icon {
+  margin: 0.5em
+}
+
+.icon:hover {
+  color: #687d66;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar-logo img {
+    width: 100px;
+
+  }
+
+  .navbar-top {
+    flex-direction: column;
+    height: fit-content;
+    justify-content: center;
+  }
+
+  .navbar-menu {
+    justify-content: center;
+    font-size: 1em;
+    padding-bottom: 20px;
+    margin: 0em;
+
+  }
 }

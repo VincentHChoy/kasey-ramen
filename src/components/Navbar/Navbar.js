@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 function About() {
   return (
@@ -15,7 +16,9 @@ function Navbar() {
   return (
     <nav class="navbar-top">
       <div class="navbar-logo">
-        <img src="https://cdn.shopify.com/s/files/1/0556/1614/3550/files/KR-logo-white-WEB_180x.png?v=1640896102" />
+        <Link to="/">
+          <img src="./logo.jpg" />
+        </Link>
       </div>
       <ul class="navbar-menu">
         <Link to="/">Home</Link>
@@ -23,8 +26,21 @@ function Navbar() {
         <Link to="/kits">Ramen Kits</Link>
         <Link to="/popups">Popups</Link>
       </ul>
+      <a
+        href={"https://www.instagram.com/kaseyramen/"}
+        aria-label="instagram"
+        target="_blank"
+        class="icon"
+      >
+        <FontAwesomeIcon
+          icon={faInstagram}
+          color={"white"}
+          size={"2x"}
+          className={"icon"}
+        />
+      </a>
     </nav>
   );
 }
 
-export { Navbar,About };
+export { Navbar, About };
