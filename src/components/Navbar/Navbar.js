@@ -4,23 +4,15 @@ import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
-function About() {
-  return (
-    <>
-      <nav></nav>
-    </>
-  );
-}
-
 function Navbar() {
   return (
-    <nav class="navbar-top">
-      <div class="navbar-logo">
+    <nav className="navbar-top">
+      <div className="navbar-logo">
         <Link to="/">
           <img src="./logo.jpg" />
         </Link>
       </div>
-      <ul class="navbar-menu">
+      <ul className="navbar-menu">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/kits">Ramen Kits</Link>
@@ -30,7 +22,7 @@ function Navbar() {
         href={"https://www.instagram.com/kaseyramen/"}
         aria-label="instagram"
         target="_blank"
-        class="icon"
+        className="icon"
       >
         <FontAwesomeIcon
           icon={faInstagram}
@@ -43,4 +35,4 @@ function Navbar() {
   );
 }
 
-export { Navbar, About };
+export { Navbar};

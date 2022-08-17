@@ -1,0 +1,90 @@
+.kit-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1em;
+}
+
+.ramen-title {
+  font-size: 3em;
+}
+
+.quantity {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 5em;
+  margin: 1em;
+}
+
+input[type=number] {
+  height: 30px;
+}
+
+input[type=number]:hover::-webkit-inner-spin-button {
+  width: 14px;
+  height: 30px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantity input {
+  height: 40px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+
+  opacity: 1;
+
+}
+
+#quantity button {
+  margin: 0.2em;
+  /* font-family: "Roboto"; */
+  color: black;
+}
+
+#quantity button:hover {
+  color: white;
+  background-color: rgb(26, 29, 30);
+  border: 2px solid rgb(26, 29, 30);
+}
+
+.ingredients {
+  list-style-type: none
+}
+
+.ingredients li {
+  margin-bottom: 0.5em;
+}
+
+.desktop {
+  display: flex;
+  flex-direction: column;
+}
+
+.order{
+  height: 50%;
+}
+
+@media screen and (min-width: 1100px) {
+  .desktop {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+
+}
+
+/* li.menu-item:not(:last-child) {
+  margin-bottom: 3px;
+} */
