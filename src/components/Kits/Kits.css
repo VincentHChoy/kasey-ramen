@@ -7,8 +7,15 @@
   margin: 1em;
 }
 
+.center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .ramen-title {
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 input[type=number] {
@@ -23,11 +30,15 @@ input[type=number]:hover::-webkit-inner-spin-button {
 .order {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .quantity input {
   height: 40px;
   width: 100%;
+  margin: 1em;
+  margin-left: 0em;
   font-size: 1.5em;
   font-family: 'DynaPuff', cursive;
   text-align: center;
@@ -36,6 +47,10 @@ input[type=number]:hover::-webkit-inner-spin-button {
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   opacity: 1;
+}
+
+img{
+  width: 80%;
 }
 
 #quantity button {
@@ -54,6 +69,7 @@ input[type=number]::-webkit-outer-spin-button {
   list-style-type: none;
   margin: 1em;
   padding: 0em;
+  text-align: center;
 }
 
 .ingredients li {
@@ -61,10 +77,16 @@ input[type=number]::-webkit-outer-spin-button {
 
 }
 
+
+
 .desktop {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
+
+
 
 
 
@@ -73,8 +95,11 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     width: 80%;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: baseline;
+  }
+
+  .ingredients li{
+    text-align: left;
+    margin-left: 5em;
   }
 
 }

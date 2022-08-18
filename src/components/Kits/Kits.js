@@ -2,9 +2,6 @@ import "./Kits.css";
 import React, { useEffect, useState } from "react";
 import Button from "../Button/Button";
 import { db } from "../../firebase";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBowlFood } from "@fortawesome/free-solid-svg-icons";
-import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons";
 import firebase from "firebase/compat/app";
 import {
   collection,
@@ -19,7 +16,7 @@ function Kits(props) {
   const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
-    const docRef = doc(db, "kits", "KWYM7uDSDNQ9hcfc8t3g");
+    const docRef = doc(db, "kits/17-07-2022/ramen", "sNrdhz8aiber8iRopQKO");
     const docSnap = getDoc(docRef)
       .then((res) => {
         setKit(res.data());
@@ -62,17 +59,17 @@ function Kits(props) {
 
   return (
     <main className="kit-container">
-      <h1>This week's Ramen</h1>
       <section className="desktop">
         {kit && (
-          <div>
+          <div className="center">
+            <h1>This week's Ramen</h1>
             <h1 className="ramen-title">{kit.name}</h1>
             <img src={kit.image} alt="picture of yummy ramen" />
           </div>
         )}
         <div className="order">
-          <div className="quantity">
             <h3>Quantity</h3>
+          <div className="quantity">
             <form
               id="quantity"
               name="quantity"
