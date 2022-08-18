@@ -11,14 +11,6 @@
   font-size: 3em;
 }
 
-.quantity {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 5em;
-  margin: 1em;
-}
-
 input[type=number] {
   height: 30px;
 }
@@ -28,21 +20,22 @@ input[type=number]:hover::-webkit-inner-spin-button {
   height: 30px;
 }
 
-form {
+.order {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
 .quantity input {
   height: 40px;
+  width: 100%;
+  font-size: 1.5em;
+  font-family: 'DynaPuff', cursive;
+  text-align: center;
 }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
-
   opacity: 1;
-
 }
 
 #quantity button {
@@ -58,11 +51,14 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .ingredients {
-  list-style-type: none
+  list-style-type: none;
+  margin: 1em;
+  padding: 0em;
 }
 
 .ingredients li {
   margin-bottom: 0.5em;
+
 }
 
 .desktop {
@@ -70,9 +66,7 @@ input[type=number]::-webkit-outer-spin-button {
   flex-direction: column;
 }
 
-.order{
-  height: 50%;
-}
+
 
 @media screen and (min-width: 1100px) {
   .desktop {
