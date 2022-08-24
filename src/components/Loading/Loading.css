@@ -1,0 +1,19 @@
+.loading {
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+.status {
+  width: 25%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

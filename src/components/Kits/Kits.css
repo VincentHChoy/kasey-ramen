@@ -7,7 +7,7 @@
   margin: 1em;
 }
 
-.center{
+.center {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,8 +49,9 @@ input[type=number]::-webkit-outer-spin-button {
   opacity: 1;
 }
 
-img{
+img {
   width: 80%;
+  border-radius: 0.8em;
 }
 
 #quantity button {
@@ -97,7 +98,7 @@ img{
     flex-direction: row;
   }
 
-  .ingredients li{
+  .ingredients li {
     text-align: left;
     margin-left: 5em;
   }
