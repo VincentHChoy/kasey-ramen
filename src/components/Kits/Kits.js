@@ -1,20 +1,18 @@
 import "./Kits.css";
 import React, { useEffect, useState } from "react";
 import Button from "../Button/Button";
+import Loading from "../Loading/Loading";
+
 import { db } from "../../firebase";
 import firebase from "firebase/compat/app";
 import { Link } from "react-router-dom";
 
 import {
-  collection,
   doc,
   getDoc,
-  getDocs,
-  QuerySnapshot,
 } from "firebase/firestore";
-import Loading from "../Loading/Loading";
 
-function Kits(props) {
+function Kits() {
   const [kit, setKit] = useState(null);
   const [quantity, setQuantity] = useState(1);
 
@@ -31,7 +29,6 @@ function Kits(props) {
     }, 1000);
   }, []);
 
-  console.log(kit);
 
   const ingredients = kit && kit.ingredients.map((ingredient, index) => {
     return <li key={index}>{ingredient}</li>;
@@ -45,11 +42,12 @@ function Kits(props) {
     month: "long",
     day: "numeric",
   };
+
   const pickupDate = kit && kit.pickupDate
     .toDate()
     .toLocaleDateString("en-us", options);
 
-  const orderRef = db.collection("kits");
+  // const orderRef = db.collection("kits");
 
   const saveOrder = async (event) => {
     event.preventDefault();
@@ -90,7 +88,7 @@ function Kits(props) {
                   value={quantity}
                   onChange={(e) => setQuantity(e.target.value)}
                 />
-                <Link to="/checkout">
+                <Link to="/checkout" state={{quantity:quantity, kit:kit}}>
                   <Button type={"submit"} desc={"Order"} />
                 </Link>
               </form>

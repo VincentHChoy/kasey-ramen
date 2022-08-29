@@ -1,0 +1,46 @@
+.card {
+  display: flex;
+  border: 2px solid black;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  padding: 1em;
+  margin: 1em;
+
+}
+
+.top {
+  background-color: #11350f;
+  height: 50px;
+  width: 100%;
+  vertical-align: top;
+  /* here */
+}
+
+@media screen and (min-width: 850px) {
+
+  .top {
+    background-color: #11350f;
+    height: 50px;
+    width: 100%;
+    vertical-align: top;
+    /* here */
+  }
+
+  .item {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  .checkout-categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+}
